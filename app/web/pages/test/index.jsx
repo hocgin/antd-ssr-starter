@@ -1,12 +1,11 @@
 import React from 'react';
-import {IGetInitialProps} from 'umi';
 import {connect} from 'dva';
 import styles from './index.less';
-import TestModel from '../../models/test';
-import {dispatchType} from '../../utils/model';
+import TestModel from '@/models/test';
+import {dispatchType} from '@/utils/model';
 
 @connect(({test}, ...rest) => {
-    return {test: {randomData: '666'}};
+    return {test};
 }, (...rest) => {
     console.log('arg2', rest);
     return {};
@@ -25,7 +24,6 @@ index.getInitialProps = (async ({store, isServer, history, match, route}) => {
     if (!isServer) {
         return
     }
-
     let type = dispatchType(TestModel, TestModel.effects.getTest);
     await store.dispatch({type: type})
     let {test} = store.getState();

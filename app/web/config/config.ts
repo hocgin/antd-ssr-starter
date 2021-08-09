@@ -1,11 +1,13 @@
 import {defineConfig} from 'umi';
+import routerConfig from '../router.config';
 
 export default defineConfig({
   ssr: {
     devServerRender: false,
   },
-  define: {
-    baseUrl: 'http://127.0.0.1:8080',
+  alias: {
+    '@': '/app/web',
+    '@@': '/app/web/.umi',
   },
   hash: true,
   outputPath: '../public',
@@ -21,6 +23,7 @@ export default defineConfig({
     baseNavigator: true,
     baseSeparator: '-',
   },
+  antd: {},
   dva: {
     immer: true,
     // hmr: false,
@@ -29,8 +32,5 @@ export default defineConfig({
     type: 'none',
   },
   fastRefresh: {},
-  routes: [
-    {path: '/', component: '@/pages/index'},
-    {path: '/test', component: '@/pages/test/index'}
-  ],
+  routes: [...routerConfig],
 });

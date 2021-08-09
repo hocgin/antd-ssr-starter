@@ -1,36 +1,21 @@
 {
-  "compileOnSave": true,
   "compilerOptions": {
-    "target": "es2017",
-    "module": "commonjs",
-    "strict": true,
-    "noImplicitAny": false,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "charset": "utf8",
-    "allowJs": false,
-    "pretty": true,
-    "noEmitOnError": false,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "allowUnreachableCode": false,
-    "allowUnusedLabels": false,
-    "strictPropertyInitialization": false,
-    "noFallthroughCasesInSwitch": true,
-    "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
-    "inlineSourceMap": true,
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
     "importHelpers": true,
-    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "sourceMap": true,
     "baseUrl": "./",
+    "strict": true,
+    // @formatter:off
     "paths": {
       "@/*": ["app/web/*"],
       "@@/*": ["app/web/.umi/*"]
     },
-  },
-  "exclude": [
-    "app/public",
-    "app/views",
-    "node_modules*"
-  ]
+    // @formatter:on
+    "allowSyntheticDefaultImports": true
+  }
 }
