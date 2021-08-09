@@ -1,0 +1,8 @@
+.idea/
+node_modules/
+.umi/
+*.iml
+logs/
+run/
+yarn.lock
+public/
