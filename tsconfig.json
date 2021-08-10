@@ -12,6 +12,7 @@
     "strict": true,
     // @formatter:off
     "paths": {
+      "~@/*": ["app/web/*"],
       "@/*": ["app/web/*"],
       "@@/*": ["app/web/.umi/*"]
     },

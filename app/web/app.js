@@ -1,5 +1,5 @@
-import { isBrowser } from 'umi';
-import { setCookie, getCookie } from './utils/cookie';
+import {isBrowser} from 'umi';
+import {setCookie, getCookie} from '@/utils/cookie';
 
 /**
  *  在运行时扩展语言plugin，语言顺序，cookie > 浏览器默认语言 > 默认语言
@@ -29,7 +29,7 @@ export const locale = {
     }
     return lang;
   },
-  setLocale({ lang, realReload = false, updater }) {
+  setLocale({lang, realReload = false, updater}) {
     if (!isBrowser()) {
       console.error('---------设置语音失败非浏览器环境--------');
       return;

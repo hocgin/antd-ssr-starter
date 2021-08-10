@@ -10,7 +10,7 @@ export default function Request(
   const defaultOptions = {
     credentials: 'include',
   };
-  const newOptions = { ...defaultOptions, ...options };
+  const newOptions = {...defaultOptions, ...options};
 
   if (
     newOptions.method === 'POST' ||
