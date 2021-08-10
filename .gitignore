@@ -6,3 +6,4 @@ logs/
 run/
 yarn.lock
 public/
+.DS_Store
