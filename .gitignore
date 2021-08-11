@@ -7,3 +7,6 @@ run/
 yarn.lock
 public/
 .DS_Store
+dist/
+.umi-production/
+manifest.json

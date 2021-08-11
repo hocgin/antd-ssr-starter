@@ -11,6 +11,13 @@ module.exports = (appInfo, appConfig = {}) => {
   // add your config here
   config.middleware = [];
 
+  config.view = {
+    mapping: {
+      '.html': 'nunjucks',
+    },
+    defaultViewEngine: 'nunjucks',
+  };
+
   config.assets = {
     publicPath: '/public',
     devServer: {
@@ -24,13 +31,6 @@ module.exports = (appInfo, appConfig = {}) => {
         PUBLIC_PATH: 'http://127.0.0.1:{port}',
       },
     },
-  };
-
-  config.view = {
-    mapping: {
-      '.html': 'nunjucks',
-    },
-    defaultViewEngine: 'nunjucks',
   };
 
   config.proxy = true;

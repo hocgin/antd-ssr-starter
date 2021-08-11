@@ -13,7 +13,7 @@ class HomeController extends Controller {
     global._cookies = ctx.helper.parseCookie(ctx);
     global._navigatorLang = ctx.helper.parseNavLang(ctx);
 
-    // 先走 eggjs 的v iew 渲染
+    // 先走 eggjs 的view 渲染
     const htmlTemplate = await ctx.view.render('index.html');
 
     // 将 html 模板传到服务端渲染函数中
@@ -30,6 +30,19 @@ class HomeController extends Controller {
     ctx.status = 200;
     ctx.body = html;
   }
+
+  // async api() {
+  //   const ctx = this.ctx;
+  //
+  //   const url = 'https://h5.ele.me' + ctx.path.replace(/^\/api/, '') + '?' + ctx.querystring;
+  //
+  //   console.log(url);
+  //   const res = await this.ctx.curl(url, {
+  //     method: this.ctx.method,
+  //   });
+  //   ctx.body = res.data;
+  //   ctx.status = res.status;
+  // }
 }
 
 module.exports = HomeController;

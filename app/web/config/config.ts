@@ -9,11 +9,10 @@ export default defineConfig({
     '@': '/app/web',
     '@@': '/app/web/.umi',
   },
-  hash: true,
   outputPath: '../public',
+  hash: true,
   manifest: {
     fileName: '../../config/manifest.json',
-    // 为 ''，不然会有两个 /
     publicPath: '',
   },
   locale: {
