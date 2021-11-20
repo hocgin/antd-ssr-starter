@@ -19,6 +19,7 @@
     "node": ">=10.0.0"
   },
   "dependencies": {
+    "@hocgin/ui": "latest",
     "@umijs/preset-react": "^1.5.17",
     "antd": "^4.16.11",
     "cross-env": "^5.2.0",
