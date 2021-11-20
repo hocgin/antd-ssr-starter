@@ -19,6 +19,7 @@ Build
 
 ```bash
 $ npm run build
+$ npm run start
 ```
 # 国际化
  目前是按照cookie > 浏览器默认语言 > 默认语言顺序选择
