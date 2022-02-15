@@ -29,6 +29,12 @@ export default class Config {
   }
 
   static getBaseUrl() {
+    // @ts-ignore
     return baseUrl;
+  }
+
+  static getSsoServerUrl() {
+    // @ts-ignore
+    return ssoServerUrl;
   }
 }

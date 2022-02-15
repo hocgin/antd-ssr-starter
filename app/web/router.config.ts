@@ -1,10 +1,11 @@
 export default [{
   path: '/',
-  component: '@/layouts/index',
+  component: '@/layouts/BasicLayout/index',
   routes: [{
     routes: [
-      {path: '/', component: '@/pages/index'},
-      {path: '/test', component: '@/pages/test/index'}
+      { path: '/', component: '@/pages/index' },
+      { path: '/test2', component: '@/pages/test2/index' },
+      { path: '/test', component: '@/pages/test/index' },
     ],
-  }]
-}, {component: '@/pages/404'}];
+  }],
+}, { component: '@/pages/404' }];

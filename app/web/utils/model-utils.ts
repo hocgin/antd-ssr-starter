@@ -4,6 +4,6 @@
  * @param effects Function
  * @returns {string}
  */
-export function dispatchType(model, effects) {
+export function dispatchType(model: any, effects: any): string {
   return `${model.namespace}/${effects.name}`;
 }
